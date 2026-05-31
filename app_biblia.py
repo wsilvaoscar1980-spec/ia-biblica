@@ -4,12 +4,12 @@ from google import genai
 # 1. Configuração da Página Web
 st.set_page_config(page_title="Mentor Teológico IA", page_icon="📖", layout="centered")
 st.title("📖 Mentor Teológico - IA Bíblica")
-st.write("Estudo profundo: Exegese, Hermenêutica, Apologética e Escatologia.")
+st.write("Estudo profundo: Exegese, Hermenêutica, Apostasia, Apologética e Escatologia.")
 
 # 2. Gerenciamento da Chave API (Insira na barra lateral)
 with st.sidebar:
     st.header("Configuração")
-    api_key = st.text_input("Insira sua Gemini API Key:", type="password")
+    # api_key = st.text_input("Insira sua Gemini API Key:", type="password")
     st.markdown("[Obtenha uma chave gratuita aqui](https://aistudio.google.com/)")
     
     st.markdown("---")
