@@ -49,14 +49,13 @@ if pergunta := st.chat_input("Digite sua dúvida teológica (Ex: Analise Romanos
     st.session_state.messages.append({"role": "user", "content": pergunta})
 
     # Verifica se a chave API foi preenchida
-    else:
-        # Processamento da resposta da IA
+    # Processamento da resposta da IA
         with st.chat_message("assistant"):
             message_placeholder = st.empty()
             
-            try:
-                # Inicializa o cliente oficial do Google GenAI
-                client = genai.Client(api_key=st.secrets["GEMINI_API_KEY"])
+        try:
+        # Inicializa o cliente oficial do Google GenAI
+        client = genai.Client(api_key=st.secrets["GEMINI_API_KEY"])
                 
                 # Formata o histórico para o modelo
                 historico_modelo = []
