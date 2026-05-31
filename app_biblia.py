@@ -59,7 +59,7 @@ if pergunta := st.chat_input("Digite sua dúvida teológica (Ex: Analise Romanos
             
             try:
                 # Inicializa o cliente oficial do Google GenAI
-                client = genai.Client(api_key=api_key)
+                client = genai.Client(api_key=st.secrets["GEMINI_API_KEY"])
                 
                 # Formata o histórico para o modelo
                 historico_modelo = []
