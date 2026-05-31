@@ -49,8 +49,6 @@ if pergunta := st.chat_input("Digite sua dúvida teológica (Ex: Analise Romanos
     st.session_state.messages.append({"role": "user", "content": pergunta})
 
     # Verifica se a chave API foi preenchida
-    if not api_key:
-        st.error("Por favor, insira sua Gemini API Key na barra lateral para continuar.")
     else:
         # Processamento da resposta da IA
         with st.chat_message("assistant"):
