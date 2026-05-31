@@ -43,19 +43,17 @@ Sempre que o usuário enviar um versículo ou tema, estruture sua resposta com:
 # 5. Fluxo do Chat
 if pergunta := st.chat_input("Digite sua dúvida teológica (Ex: Analise Romanos 9 ou Explique o Milênio)..."):
     
-    # Exibe a pergunta do usuário na tela
-    with st.chat_message("user"):
-        st.markdown(pergunta)
-    st.session_state.messages.append({"role": "user", "content": pergunta})
+# Exibe a pergunta do usuário na tela
+with st.chat_message("user"):
+st.markdown(pergunta)
+st.session_state.messages.append({"role": "user", "content": pergunta})
 
-    # Verifica se a chave API foi preenchida
-    # Processamento da resposta da IA
-        with st.chat_message("assistant"):
-            message_placeholder = st.empty()
+with st.chat_message("assistant"):
+message_placeholder = st.empty()
             
-        try:
-        # Inicializa o cliente oficial do Google GenAI
-        client = genai.Client(api_key=st.secrets["GEMINI_API_KEY"])
+try:
+# Inicializa o cliente oficial do Google GenAI
+client = genai.Client(api_key=st.secrets["GEMINI_API_KEY"])
                 
                 # Formata o histórico para o modelo
                 historico_modelo = []
